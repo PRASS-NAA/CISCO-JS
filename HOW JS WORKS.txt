@@ -1,0 +1,25 @@
+everything in js is executed inside an exceution context
+
+execution context?
+think of it like a box which describes the environment in which js is running.
+
+execution context has 2 parts: memory component (variable environment), code component (thread of execution).
+
+when a js code is run, a global execution context is created. this is the top-most execution context. all other execution contexts are nested inside this
+global execution context. when a function is called, a new execution context is created and pushed onto the call stack
+
+call stack is maintained by js and is used to keep track of the execution contexts. it's a stack data structure, so the last execution context added is the first one to be removed.
+
+when a js code is run, the following happens:
+execution context is created in 2 phases, 
+
+first is MEMORY CREATION phase......where in memory component the variables,functions and their values are stored in key value pairs.
+initially all variables are assigned a value undefined.
+
+if any function is seen, then the whole function body is set as value for function name key
+
+second phase is CODE EXECCUTION PHASE...... in this phase the code is executed one by one and values are assigned to proper values in memory component,
+
+when there is a function invocation, a new local execution context is created within the global execution context, and for that function again,
+these two phases occur and builds the execution context. once the function returns the control goes to the execution caontext whicj made the function
+call. all these are handles by call stack (synchronous).
