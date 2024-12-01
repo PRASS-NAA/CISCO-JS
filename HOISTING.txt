@@ -1,0 +1,7 @@
+when the execution context is created and memory allocation phase is finished,
+all variables are assigned to undefined and all functions store the whole code of function as value
+that's y when we access a variable bfr assigning value to variable it shows undefined
+and when we call a function bfr definition, function is properly executed.
+
+Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+
